@@ -7,10 +7,11 @@
 
 .container .content-card{
     width: 100%;
-    max-width: 600px;
-    height: 100%;
-    max-height: 300px;
-    padding: 2.4rem;
+    max-width: 450px;
+    
+    min-height: 200px;
+    padding: 3rem;
+    padding-bottom: 3.4rem;
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -22,6 +23,14 @@
         letter-spacing: 4px;
         font-size: 12px;
     }
+    
+    .content-appointment{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
     .die{
         
         min-height: 60px;

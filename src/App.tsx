@@ -7,10 +7,10 @@ import diceIcon from './assets/icon-dice.svg'
 import { useEffect, useState } from 'react'
 
 interface Quote {
-  a:string
-  c:string
-  h:string
-  q:string
+  a: string
+  c: string
+  h: string
+  q: string
 }
 
 /* https://zenquotes.io/api/quotes */
@@ -26,28 +26,28 @@ function App() {
   })
 
   useEffect(() => {
-    fetch('/api/api/quotes').then((resp => resp.json())).then((quotes: Quote[]) => {      
-      setQuotes(quotes)      
+    fetch('/api/api/quotes').then((resp => resp.json())).then((quotes: Quote[]) => {
+      setQuotes(quotes)
     })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
   }, []);
 
 
-  const randomIntInRange = (min:number, max:number) => {    
+  const randomIntInRange = (min: number, max: number) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  const generateNewAppoiment = () => {    
+  const generateNewAppointment = () => {
     const indexRandom: number = randomIntInRange(0, (quotes.length - 1));
-    const quote:Quote = quotes[indexRandom];  
+    const quote: Quote = quotes[indexRandom];
     setAppointment({
       id: Number(quote.c),
       autor: quote.a,
       phrase: quote.q
     })
-    
+
   }
 
   return (
@@ -55,16 +55,17 @@ function App() {
 
       <div className="content-card bg-dark-grayish-blue">
         <span className='color-neon-green'>ADVICE #{appointment.id}</span>
+        <div className='content-appointment'>
+          <p className="manrope-bold fz-28 color-light-cyan">
+            “{appointment.phrase}”
+          </p>
 
-        <p className="manrope-bold fz-28 color-light-cyan">
-          “{appointment.phrase}”
-        </p>
+          <img src={divider} alt="" />
 
-        <img src={divider} alt="" />
+          <span className='color-neon-green'>{appointment.autor}</span>
+        </div>
 
-        <span className='color-neon-green'>{appointment.autor}</span>
-
-        <div className='die' onClick={generateNewAppoiment}>
+        <div className='die' onClick={generateNewAppointment}>
           <img src={diceIcon} alt="" className='icon-die' />
         </div>
       </div>
