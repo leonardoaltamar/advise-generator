@@ -30,7 +30,7 @@ function App() {
     fetch('/api/quotes').then((resp => resp.json())).then((quotes: Quote[]) => {
       setQuotes(quotes)
     })
-    .catch(error => {
+    .catch(() => {
       setQuotes(quotesSimulation)
     });
   }, []);
