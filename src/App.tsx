@@ -60,7 +60,7 @@ function App() {
             “{appointment.phrase}”
           </p>
 
-          <img src={divider} alt="" />
+          <img className='divider' src={divider} alt="" />
 
           <span className='color-neon-green'>{appointment.autor}</span>
         </div>
