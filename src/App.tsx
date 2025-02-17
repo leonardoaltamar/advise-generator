@@ -26,7 +26,7 @@ function App() {
   })
 
   useEffect(() => {
-    fetch('/api/api/quotes').then((resp => resp.json())).then((quotes: Quote[]) => {
+    fetch('/api/quotes').then((resp => resp.json())).then((quotes: Quote[]) => {
       setQuotes(quotes)
     })
     .catch(error => {
