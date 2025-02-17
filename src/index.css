@@ -1,0 +1,60 @@
+:root{
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 70%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.manrope {
+  font-family: "Manrope", serif;
+  font-optical-sizing: auto;  
+  font-style: normal;
+}
+
+.manrope-bold {
+  font-family: "Manrope", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.fz-28{
+  font-size: 28px;
+}
+
+.color-light-cyan{
+  color: var(--light-cyan);
+}
+
+.color-neon-green{
+  color: var(--neon-green);
+}
+
+.color-grayish-blue{
+  color: var(--grayish-blue);
+}
+
+.color-dark-grayish-blue{
+  color: var(--dark-grayish-blue);
+}
+
+.bg-dark-grayish-blue{
+  background-color: var(--dark-grayish-blue);
+}
+
+.color-dark-blue{
+  color: var(--dark-blue);
+}
+
+body{
+  background-color: var(--dark-blue);
+  font-family: "Manrope", serif;
+}
