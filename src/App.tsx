@@ -5,6 +5,7 @@ import './App.css'
 import divider from './assets/pattern-divider-desktop.svg'
 import diceIcon from './assets/icon-dice.svg'
 import { useEffect, useState } from 'react'
+import { quotesSimulation } from './quotes.simulation'
 
 interface Quote {
   a: string
@@ -30,7 +31,7 @@ function App() {
       setQuotes(quotes)
     })
     .catch(error => {
-      console.error('Error fetching data:', error);
+      setQuotes(quotesSimulation)
     });
   }, []);
 
