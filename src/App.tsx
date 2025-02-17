@@ -29,9 +29,9 @@ function App() {
     fetch('/api/api/quotes').then((resp => resp.json())).then((quotes: Quote[]) => {
       setQuotes(quotes)
     })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
   }, []);
 
 
